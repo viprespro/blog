@@ -92,7 +92,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">493</span>
+            <span class="post-count">488</span>
         </span>
     </span>
 
@@ -140,44 +140,14 @@
 
 <h2 id="Iptables"><a href="#Iptables" class="headerlink" title="Iptables"></a>Iptables</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 让在安全组配置中的端口可以访问</span></span><br><span class="line">iptables -I INPUT -p tcp -m state --state NEW -m tcp --dport 8087 -j ACCEPT</span><br></pre></td></tr></table></figure>
 
-<h2 id="Decompression-and-compression"><a href="#Decompression-and-compression" class="headerlink" title="Decompression and compression"></a>Decompression and compression</h2><h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 压缩</span></span><br><span class="line">zip -r demo.zip demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压xxx.zip 到当前目录</span></span><br><span class="line">unzip xxx.zip -d . </span><br></pre></td></tr></table></figure>
+<h2 id="Decompression-and-compression"><a href="#Decompression-and-compression" class="headerlink" title="Decompression and compression"></a>Decompression and compression</h2><h3 id="zip"><a href="#zip" class="headerlink" title="zip"></a>zip</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 压缩 zip </span></span><br><span class="line">zip -r demo.zip demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压xxx.zip 到当前目录</span></span><br><span class="line">unzip xxx.zip -d . </span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 压缩 tar</span></span><br><span class="line">tar zcvf demo.tar.gz demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -xvf demo.tar</span><br><span class="line">tar -xvf demo.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 压缩</span></span><br><span class="line">tar zcvf demo.tar.gz demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -xvf demo.tar</span><br><span class="line">tar -xvf demo.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># mac terminal or xshell tools like </span></span><br><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure>
 
-<h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><ul>
-<li>mac</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure>
+<h2 id="Upload-or-download-file"><a href="#Upload-or-download-file" class="headerlink" title="Upload or download file"></a>Upload or download file</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. install lrzsz</span></span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">yum install lrzsz -y</span><br><span class="line"><span class="comment"># 验证</span></span><br><span class="line">rpm -qa | grep lrzsz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. upload</span></span><br><span class="line"><span class="comment"># 弹窗选择文件框</span></span><br><span class="line">rz</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. download</span></span><br><span class="line">sz xxx</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>xshell</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure>
+<h3 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. upload</span></span><br><span class="line"><span class="comment"># 基于本地终端操作 默认上传到目录为用户目录 如下：我用户目录存在test文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件</span></span><br><span class="line">scp  docker.md root@119.23.208.253:./test/docker.md</span><br><span class="line"><span class="comment"># 上传文件夹 xxx为某个文件夹</span></span><br><span class="line">scp -r xxx root@119.23.208.253:./</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. download</span></span><br><span class="line"><span class="comment"># 基于本地终端</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">scp root@119.23.208.253:/root/docker.md .</span><br><span class="line"><span class="comment"># 下载文件夹test</span></span><br><span class="line">scp -r root@119.23.208.253:/root/test .</span><br></pre></td></tr></table></figure>
 
-<h2 id="Upload-or-download-file"><a href="#Upload-or-download-file" class="headerlink" title="Upload or download file"></a>Upload or download file</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ol>
-<li>安装<code>lrzsz</code></li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">yum install lrzsz -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证</span></span><br><span class="line">rpm -qa | grep lrzsz</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>上传</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 弹窗选择文件框</span></span><br><span class="line">rz</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>下载</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sz xxx</span><br></pre></td></tr></table></figure>
-
-<h3 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h3><ol>
-<li>上传</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端操作 默认上传到目录为用户目录 如下：我用户目录存在test文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件</span></span><br><span class="line">scp  docker.md root@119.23.208.253:./test/docker.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件夹 xxx为某个文件夹</span></span><br><span class="line">scp -r xxx root@119.23.208.253:./</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>下载</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">scp root@119.23.208.253:/root/docker.md .</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 下载文件夹test</span></span><br><span class="line">scp -r root@119.23.208.253:/root/test .</span><br></pre></td></tr></table></figure>
 
 <h2 id="Mysql-in-linux-system"><a href="#Mysql-in-linux-system" class="headerlink" title="Mysql in linux system"></a>Mysql in linux system</h2><p><strong>installation：</strong><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/baoshu/p/centos-mysql.html">https://www.cnblogs.com/baoshu/p/centos-mysql.html</a></p>
 <p><strong>operation</strong><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/1906859953Lucas/p/10925511.html">https://www.cnblogs.com/1906859953Lucas/p/10925511.html</a></p>
