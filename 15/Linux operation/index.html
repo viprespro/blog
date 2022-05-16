@@ -128,8 +128,10 @@
 <li>rm -f  </li>
 <li>rm -rf </li>
 <li>vim</li>
-<li>vi <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim &amp; vi 二者区别：</span><br><span class="line">1.vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；</span><br><span class="line">2.vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息</span><br><span class="line">3.vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等</span><br></pre></td></tr></table></figure></li>
+<li>vi </li>
 </ul>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim &amp; vi 二者区别：</span><br><span class="line">1.vim 具有程序编辑的能力，可以以字体颜色辨别语法的正确性，方便程序设计；</span><br><span class="line">2.vim可以当作vi的升级版本，他可以用多种颜色的方式来显示一些特殊的信息</span><br><span class="line">3.vim里面加入了很多额外的功能，例如支持正则表达式的搜索、多文件编辑、块复制等等</span><br></pre></td></tr></table></figure>
+
 <h2 id="Package-manager-yum"><a href="#Package-manager-yum" class="headerlink" title="Package manager - yum"></a>Package manager - yum</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">yum install -y package(eg.ngnix)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移除单个或者多个</span></span><br><span class="line">yum remove wget unzip -y</span><br></pre></td></tr></table></figure>
 
 <h2 id="Network-or-port-status"><a href="#Network-or-port-status" class="headerlink" title="Network or port status"></a>Network or port status</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看tcp端口是否被占用</span></span><br><span class="line">netstat -nultp</span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤选择查看某个端口</span></span><br><span class="line">netstat -anp | grep 8000</span><br></pre></td></tr></table></figure>
@@ -142,30 +144,42 @@
 
 <h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 压缩</span></span><br><span class="line">tar zcvf demo.tar.gz demo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压</span></span><br><span class="line">tar -xvf demo.tar</span><br><span class="line">tar -xvf demo.tar.gz</span><br></pre></td></tr></table></figure>
 
-<h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><ol>
-<li><p>mac</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure></li>
-<li><p>xshell</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure></li>
-</ol>
+<h2 id="Connection"><a href="#Connection" class="headerlink" title="Connection"></a>Connection</h2><ul>
+<li>mac</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>xshell</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@119.23.208.xx </span><br></pre></td></tr></table></figure>
+
 <h2 id="Upload-or-download-file"><a href="#Upload-or-download-file" class="headerlink" title="Upload or download file"></a>Upload or download file</h2><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ol>
 <li>安装<code>lrzsz</code></li>
 </ol>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">yum install lrzsz -y</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证</span></span><br><span class="line">rpm -qa | grep lrzsz</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li><p>上传</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 弹窗选择文件框</span></span><br><span class="line">rz</span><br></pre></td></tr></table></figure></li>
-<li><p>下载</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sz xxx</span><br></pre></td></tr></table></figure></li>
+<li>上传</li>
 </ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 弹窗选择文件框</span></span><br><span class="line">rz</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>下载</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sz xxx</span><br></pre></td></tr></table></figure>
+
 <h3 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h3><ol>
-<li><p>上传</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端操作 默认上传到目录为用户目录 如下：我用户目录存在test文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件</span></span><br><span class="line">scp  docker.md root@119.23.208.253:./test/docker.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件夹 xxx为某个文件夹</span></span><br><span class="line">scp -r xxx root@119.23.208.253:./</span><br></pre></td></tr></table></figure></li>
-<li><p>下载</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">scp root@119.23.208.253:/root/docker.md .</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 下载文件夹test</span></span><br><span class="line">scp -r root@119.23.208.253:/root/test .</span><br></pre></td></tr></table></figure></li>
+<li>上传</li>
 </ol>
-<h2 id="Mysql-in-linux-system"><a href="#Mysql-in-linux-system" class="headerlink" title="Mysql in linux system"></a>Mysql in linux system</h2><p><strong>install：</strong><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/baoshu/p/centos-mysql.html">https://www.cnblogs.com/baoshu/p/centos-mysql.html</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端操作 默认上传到目录为用户目录 如下：我用户目录存在test文件夹</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件</span></span><br><span class="line">scp  docker.md root@119.23.208.253:./test/docker.md</span><br><span class="line"></span><br><span class="line"><span class="comment"># 上传文件夹 xxx为某个文件夹</span></span><br><span class="line">scp -r xxx root@119.23.208.253:./</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>下载</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基于本地终端</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载文件</span></span><br><span class="line">scp root@119.23.208.253:/root/docker.md .</span><br><span class="line">  </span><br><span class="line"><span class="comment"># 下载文件夹test</span></span><br><span class="line">scp -r root@119.23.208.253:/root/test .</span><br></pre></td></tr></table></figure>
+
+<h2 id="Mysql-in-linux-system"><a href="#Mysql-in-linux-system" class="headerlink" title="Mysql in linux system"></a>Mysql in linux system</h2><p><strong>installation：</strong><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/baoshu/p/centos-mysql.html">https://www.cnblogs.com/baoshu/p/centos-mysql.html</a></p>
 <p><strong>operation</strong><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/1906859953Lucas/p/10925511.html">https://www.cnblogs.com/1906859953Lucas/p/10925511.html</a></p>
  
       <!-- reward -->
